@@ -1,0 +1,111 @@
+.library-stats {
+    margin-bottom: 140px;
+}
+
+.library-stats-heading {
+    margin-bottom: 35px;
+}
+
+.library-stats-heading .section-eyebrow {
+    margin: 0 0 14px;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.library-stats-heading h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+.library-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    border-top: 1px solid rgba(29, 29, 27, 0.18);
+    border-bottom: 1px solid rgba(29, 29, 27, 0.18);
+}
+
+.library-stat {
+    min-height: 130px;
+    padding: 25px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-right: 1px solid rgba(29, 29, 27, 0.12);
+}
+
+.library-stat:last-child {
+    border-right: 0;
+}
+
+.library-stat strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.library-stat span {
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+    .library-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .library-stat:nth-child(3) {
+        border-right: 0;
+    }
+
+    .library-stat:nth-child(4),
+    .library-stat:nth-child(5) {
+        border-top: 1px solid rgba(29, 29, 27, 0.12);
+    }
+}
+
+@media (max-width: 600px) {
+    .library-stats {
+        margin-top: 60px;
+    }
+
+    .library-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .library-stat {
+        min-height: 110px;
+    }
+
+    .library-stat:nth-child(3) {
+        border-right: 1px solid rgba(29, 29, 27, 0.12);
+    }
+
+    .library-stat:nth-child(even) {
+        border-right: 0;
+    }
+
+    .library-stat:nth-child(3),
+    .library-stat:nth-child(4),
+    .library-stat:nth-child(5) {
+        border-top: 1px solid rgba(29, 29, 27, 0.12);
+    }
+
+    .library-stat strong {
+        font-size: 34px;
+    }
+}

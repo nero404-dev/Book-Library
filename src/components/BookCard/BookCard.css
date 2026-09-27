@@ -1,0 +1,165 @@
+.book-card {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 25px;
+    align-items: center;
+
+    padding: 25px 0;
+
+    border-top: 1px solid rgba(29, 29, 27, 0.14);
+
+    cursor: pointer;
+
+    transition:
+        padding-left 0.2s ease,
+        padding-right 0.2s ease;
+}
+
+.book-card:last-child {
+    border-bottom: 1px solid rgba(29, 29, 27, 0.14);
+}
+
+
+/* COVER */
+
+.book-card img {
+    width: 120px;
+    height: 175px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 2px;
+
+    background: rgba(29, 29, 27, 0.05);
+}
+
+
+/* BOOK INFORMATION */
+
+.book-card h2 {
+    margin: 0 0 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.book-card p {
+    margin: 5px 0;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    opacity: 0.6;
+}
+
+
+/* STATUS */
+
+.book-card select {
+    padding: 9px 28px 9px 0;
+
+    border: 0;
+    border-bottom: 1px solid rgba(29, 29, 27, 0.25);
+    border-radius: 0;
+
+    outline: none;
+
+    background: transparent;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.book-card select:focus {
+    border-bottom-color: #1d1d1b;
+}
+
+
+/* FAVORITE */
+
+.book-card>div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.book-card button {
+    width: 34px;
+    height: 34px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    line-height: 1;
+
+    opacity: 0.65;
+}
+
+.book-card button:hover {
+    opacity: 1;
+}
+
+
+/* HOVER */
+
+.book-card:hover {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.book-card:hover h2 {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .book-card {
+        grid-template-columns: 80px 1fr;
+        gap: 16px;
+
+        padding: 20px 0;
+    }
+
+    .book-card img {
+        width: 80px;
+        height: 120px;
+    }
+
+    .book-card h2 {
+        font-size: 22px;
+    }
+
+    .book-card>div {
+        grid-column: 2;
+        justify-content: flex-start;
+    }
+
+    .book-card select {
+        grid-column: 2;
+        width: fit-content;
+    }
+
+    .book-card:hover {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

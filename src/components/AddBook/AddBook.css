@@ -1,0 +1,134 @@
+/* =========================
+   MANUAL ADD
+========================= */
+
+.manual-add {
+    max-width: 900px;
+
+    margin: 120px auto 0;
+    padding-top: 80px;
+
+    /* border-top: 1px solid rgba(29, 29, 27, 0.12); */
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.manual-add-heading {
+    text-align: center;
+}
+
+.manual-add-heading .section-eyebrow {
+    margin: 0 0 14px;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.manual-add-heading h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.manual-add-form {
+    margin-top: 45px;
+}
+
+.manual-add-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 30px;
+}
+
+.manual-add-grid input,
+.manual-add-grid select {
+    width: 100%;
+
+    padding: 16px 0;
+
+    border: 0;
+    border-bottom: 1px solid rgba(29, 29, 27, 0.25);
+
+    outline: none;
+
+    background: transparent;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+}
+
+.manual-add-grid input::placeholder {
+    color: rgba(29, 29, 27, 0.45);
+}
+
+.manual-add-grid input:focus,
+.manual-add-grid select:focus {
+    border-bottom-color: #1d1d1b;
+}
+
+
+/* =========================
+   SUBMIT
+========================= */
+
+.manual-add-submit {
+    margin-top: 35px;
+
+    padding: 16px;
+
+    border: 1px solid rgba(29, 29, 27, 0.25);
+
+    background: transparent;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+}
+
+.manual-add-submit:hover {
+    text-decoration: underline;
+    border: 1px solid #1d1d1b;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.manual-add-message {
+    margin-top: 20px;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .manual-add {
+        margin-top: 90px;
+        padding-top: 60px;
+    }
+
+    .manual-add-grid {
+        grid-template-columns: 1fr;
+    }
+}

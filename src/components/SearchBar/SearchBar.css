@@ -1,0 +1,144 @@
+.library-controls {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.library-controls-heading {
+    text-align: center;
+}
+
+.library-controls-heading .section-eyebrow {
+    margin: 0 0 14px;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.library-controls-heading h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+
+/* SEARCH */
+
+.library-search {
+    max-width: 720px;
+    margin: 45px auto 0;
+
+    border-bottom: 1px solid #1d1d1b;
+}
+
+.library-search:hover {
+    border-bottom: 1px solid rgba(29, 29, 27, 0.25);
+}
+
+.library-search input {
+    width: 100%;
+    padding: 16px 0;
+
+    border: 0;
+    outline: none;
+    background: transparent;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-style: italic;
+    transition: 0.4s ease;
+}
+
+/* .library-search input:focus {
+    border-bottom: 1px solid #1d1d1b;
+} */
+
+.library-search input::placeholder {
+    color: rgba(29, 29, 27, 0.45);
+}
+
+.library-search input::-webkit-search-cancel-button {
+    display: none;
+}
+
+
+/* FILTERS */
+
+.library-filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 35px;
+}
+
+.library-filters select {
+    padding: 10px 14px;
+
+    border: 1px solid rgba(29, 29, 27, 0.2);
+    border-radius: 999px;
+    outline: none;
+
+    background: transparent;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+
+    cursor: pointer;
+}
+
+.library-filters select:focus {
+    border-color: #1d1d1b;
+}
+
+
+/* RESET */
+
+.library-reset {
+    padding: 10px 14px;
+
+    border: 1px solid #1d1d1b;
+    border-radius: 999px;
+
+    background: transparent;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+}
+
+.library-reset:hover {
+    background: #1d1d1b;
+    color: #f3f0e9;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .library-search {
+        margin-top: 35px;
+    }
+
+    .library-search input {
+        font-size: 19px;
+    }
+
+    .library-filters {
+        justify-content: flex-start;
+    }
+
+    .library-filters select,
+    .library-reset {
+        font-size: 9px;
+    }
+}

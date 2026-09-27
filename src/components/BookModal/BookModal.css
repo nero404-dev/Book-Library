@@ -1,0 +1,424 @@
+/* =========================
+   MODAL BACKDROP
+========================= */
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(29, 29, 27, 0.48);
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.book-modal {
+    position: relative;
+
+    width: min(900px, 100%);
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #f3f0e9;
+
+    border: 1px solid rgba(29, 29, 27, 0.15);
+
+    box-shadow: 0 25px 80px rgba(29, 29, 27, 0.18);
+}
+
+
+/* =========================
+   CLOSE
+========================= */
+
+.modal-close {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    z-index: 2;
+
+    width: 36px;
+    height: 36px;
+
+    padding: 0;
+
+    border: 1px solid rgba(29, 29, 27, 0.2);
+    border-radius: 50%;
+
+    background: transparent;
+
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.modal-close:hover {
+    background: #1d1d1b;
+    color: #f3f0e9;
+}
+
+
+/* =========================
+   VIEW
+========================= */
+
+.book-modal-view {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+
+    gap: 55px;
+
+    padding: 55px;
+}
+
+
+/* =========================
+   COVER
+========================= */
+
+.book-modal-cover {
+    width: 100%;
+}
+
+.book-modal-cover img {
+    width: 100%;
+    height: 350px;
+
+    display: block;
+
+    object-fit: cover;
+
+    background: rgba(29, 29, 27, 0.05);
+}
+
+.book-modal-cover img:hover {
+    filter: brightness(0.7);
+}
+
+
+/* =========================
+   DETAILS
+========================= */
+
+.book-modal-details {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding-right: 35px;
+}
+
+.book-modal-eyebrow {
+    margin: 0 0 16px;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    opacity: 0.55;
+}
+
+.book-modal-title {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+}
+
+.book-modal-author {
+    margin: 18px 0 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-style: italic;
+
+    opacity: 0.65;
+}
+
+
+/* =========================
+   META
+========================= */
+
+.book-modal-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-top: 45px;
+
+    border-top: 1px solid rgba(29, 29, 27, 0.15);
+}
+
+.book-modal-meta div {
+    padding: 18px 15px 18px 0;
+
+    border-bottom: 1px solid rgba(29, 29, 27, 0.15);
+}
+
+.book-modal-meta div:nth-child(odd) {
+    border-right: 1px solid rgba(29, 29, 27, 0.15);
+}
+
+.book-modal-meta div:nth-child(even) {
+    padding-left: 15px;
+}
+
+.book-modal-meta span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+
+    opacity: 0.5;
+}
+
+.book-modal-meta strong {
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.book-modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 35px;
+}
+
+.book-modal-actions button {
+    padding: 11px 15px;
+
+    border: 1px solid rgba(29, 29, 27, 0.25);
+
+    background: transparent;
+
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.book-modal-actions button:hover {
+    background: #1d1d1b;
+    color: #f3f0e9;
+}
+
+
+/* =========================
+   EDIT
+========================= */
+
+.book-modal-edit {
+    padding: 55px;
+}
+
+.book-modal-heading {
+    margin-bottom: 40px;
+}
+
+.book-modal-heading .section-eyebrow {
+    margin-bottom: 14px;
+}
+
+.book-modal-heading h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 5vw, 56px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.book-modal-form {
+    display: grid;
+
+    gap: 25px;
+}
+
+.book-modal-form label {
+    display: block;
+}
+
+.book-modal-form label>span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    opacity: 0.55;
+}
+
+.book-modal-form input,
+.book-modal-form select {
+    width: 100%;
+
+    padding: 12px 0;
+
+    border: 0;
+    border-bottom: 1px solid rgba(29, 29, 27, 0.25);
+
+    outline: none;
+
+    background: transparent;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+}
+
+.book-modal-form input:focus,
+.book-modal-form select:focus {
+    border-bottom-color: #1d1d1b;
+}
+
+.book-modal-form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+/* =========================
+   FORM ACTIONS
+========================= */
+
+.book-modal-form-actions {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 40px;
+}
+
+.book-modal-form-actions button {
+    padding: 13px 18px;
+
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+}
+
+.modal-primary-action {
+    border: 1px solid #1d1d1b;
+
+    background: #1d1d1b;
+    color: #f3f0e9;
+}
+
+.modal-primary-action:hover {
+    opacity: 0.8;
+}
+
+.modal-secondary-action {
+    border: 1px solid rgba(29, 29, 27, 0.25);
+
+    background: transparent;
+}
+
+.modal-secondary-action:hover {
+    border-color: #1d1d1b;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .modal-backdrop {
+        padding: 15px;
+    }
+
+    .book-modal-view {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 40px 25px;
+    }
+
+    .book-modal-cover {
+        width: 160px;
+    }
+
+    .book-modal-cover img {
+        height: 240px;
+    }
+
+    .book-modal-details {
+        padding-right: 0;
+    }
+
+    .book-modal-title {
+        font-size: 42px;
+    }
+
+    .book-modal-meta {
+        margin-top: 30px;
+    }
+
+    .book-modal-edit {
+        padding: 40px 25px;
+    }
+
+    .book-modal-form-row {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .book-modal-form-actions {
+        flex-direction: column;
+    }
+
+    .book-modal-form-actions button {
+        width: 100%;
+    }
+}

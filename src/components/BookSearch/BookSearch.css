@@ -1,0 +1,347 @@
+/* =========================
+   BOOK SEARCH
+========================= */
+
+.book-search {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading {
+    text-align: center;
+}
+
+.section-eyebrow {
+    margin: 0 0 14px;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+
+/* =========================
+   SEARCH FORM
+========================= */
+
+.book-search-form {
+    display: flex;
+    align-items: stretch;
+
+    max-width: 720px;
+
+    margin: 45px auto 0;
+
+    border-bottom: 1px solid #1d1d1b;
+}
+
+.book-search-form:hover {
+    border-bottom: 1px solid rgba(29, 29, 27, 0.25);
+}
+
+.book-search-input-wrap {
+    position: relative;
+
+    flex: 1;
+}
+
+.book-search-form input {
+    width: 100%;
+
+    padding: 16px 42px 16px 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-style: italic;
+}
+
+.book-search-form input::placeholder {
+    color: rgba(29, 29, 27, 0.45);
+}
+
+.book-search-form input::-webkit-search-cancel-button {
+    display: none;
+}
+
+
+/* =========================
+   CLEAR BUTTON
+========================= */
+
+.book-search-clear {
+    position: absolute;
+
+    top: 50%;
+    right: 8px;
+
+    width: auto;
+    padding: 0 10px;
+
+    transform: translateY(-50%);
+
+    border: 0;
+
+    background: transparent;
+
+    font-size: 22px;
+    line-height: 1;
+
+    opacity: 0.6;
+}
+
+.book-search-clear:hover {
+    opacity: 1;
+}
+
+
+/* =========================
+   SEARCH BUTTON
+========================= */
+
+.book-search-submit {
+    padding: 0 20px;
+    margin: 10px 0;
+
+    border: 1px solid #1d1d1b;
+
+    background: transparent;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+}
+
+.book-search-submit:hover {
+    text-decoration: underline;
+}
+
+.book-search-submit.empty {
+    border: 1px solid rgba(29, 29, 27, 0.25);
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   SEARCH STATUS
+========================= */
+
+.search-status,
+.search-message {
+    margin: 24px 0;
+
+    text-align: center;
+
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+}
+
+.search-error {
+    opacity: 0.7;
+}
+
+
+/* =========================
+   SEARCH RESULTS
+========================= */
+
+.book-search-results {
+    position: relative;
+
+    margin-top: 60px;
+}
+
+.book-search-result-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-search-result {
+    display: grid;
+    grid-template-columns: 64px 1fr auto;
+    gap: 20px;
+    align-items: center;
+
+    padding: 18px 0;
+
+    border-top: 1px solid rgba(29, 29, 27, 0.12);
+}
+
+.book-search-result:last-child {
+    border-bottom: 1px solid rgba(29, 29, 27, 0.12);
+}
+
+.book-search-result img {
+    width: 64px;
+    height: 88px;
+
+    object-fit: cover;
+}
+
+.book-search-result-info h3 {
+    margin: 0 0 7px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.book-search-result-info p {
+    margin: 3px 0;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+
+/* =========================
+   ADD RESULT
+========================= */
+
+.book-search-add {
+    padding: 10px 0;
+
+    border: 0;
+
+    background: transparent;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+}
+
+.book-search-add:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   SEARCH PAGINATION
+========================= */
+
+.book-search-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 24px;
+
+    margin-top: 35px;
+}
+
+.book-search-pagination button {
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+}
+
+.book-search-pagination button:hover:not(:disabled) {
+    text-decoration: underline;
+}
+
+.book-search-pagination button:disabled {
+    opacity: 0.25;
+    cursor: default;
+}
+
+.book-search-pagination span {
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+}
+
+
+/* =========================
+   LOADING OVERLAY
+========================= */
+
+.search-loading-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(243, 240, 233, 0.82);
+
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    z-index: 9999;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .book-search-form {
+        display: block;
+
+        border-bottom: 0;
+    }
+
+    .book-search-input-wrap {
+        border-bottom: 1px solid #1d1d1b;
+    }
+
+    .book-search-submit {
+        display: block;
+
+        margin-top: 18px;
+        padding: 0;
+    }
+
+    .book-search-result {
+        grid-template-columns: 52px 1fr;
+        gap: 14px;
+    }
+
+    .book-search-result img {
+        width: 52px;
+        height: 74px;
+    }
+
+    .book-search-add {
+        grid-column: 2;
+
+        justify-self: start;
+    }
+}
