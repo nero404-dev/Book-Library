@@ -453,6 +453,10 @@ function App() {
 
       </main>
 
+      <footer>
+        <a class="copyright" href="https://nero404-dev.github.io/nero404-portfolio/">nero404</a>
+      </footer>
+
     </div>
   );
 }
