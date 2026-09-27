@@ -202,17 +202,25 @@ main {
   color: red;
 }
 
-.copyright {
-    width: fit-content;
-    color: black;
-    font-family: monospace;
-    font-size: 12px;
-    transition: 0.4s;
-  }
+footer {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 0 35px 0;
+  text-align: center;
+  border-top: 1px solid grey;
+}
 
-  .copyright:hover {
-    color: grey;
-  }
+.copyright {
+  width: fit-content;
+  color: black;
+  font-family: monospace;
+  font-size: 12px;
+  transition: 0.4s;
+}
+
+.copyright:hover {
+  color: grey;
+}
 
 
 /* =========================
